@@ -55,7 +55,6 @@ async def send_without_tag(target_chat, original_msg):
         await client.forward_messages(
             entity=target_chat,
             messages=original_msg,
-            drop_author=True,
             silent=True
         )
         await mark_as_forwarded(original_msg.id)
